@@ -93,11 +93,6 @@
                                 <input type="text" class="form-control input" name="comuna" data-form-field="Comuna" placeholder="Comuna" required="" id="comuna-form4-8e" value='Providencia'>
                             </div>
 
-                            <div class="col-md-4" data-for="latitude">
-                                <input type="text" class="form-control input" id="latitude" name="latitude" data-form-field="latitude" placeholder="Latitud" required="" id="comuna-form4-8e" value=''>
-                            </div>
-
-
                             <div class="col-md-12" data-for="descripcion">
                                 <textarea class="form-control input" name="descripcion" rows="3" data-form-field="Descripcion" placeholder="Describa su problema" style="resize:none" required="" id="message-form4-8e"></textarea>
                             </div>
@@ -150,7 +145,9 @@ function getLocation() {
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
-  document.getElementById('latitude').value = position.coords.latitude.toString(10);
+  document.getElementById('latitude').value  = position.coords.latitude.toString(10);
+  document.getElementById('longitude').value = position.coords.longitude.toString(10);
+
 }
 </script>
 
